@@ -4,7 +4,7 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <f:metadata>
-  <f:event type="preRenderView" listener="#{studentController.loadStudents()}"/>
+  <f:event type="preRenderView" listener="#{musicController.loadMusic()}"/>
 </f:metadata>
 
 <h:head>
@@ -18,7 +18,7 @@
 
 	<br/>
 	
-	The data: #{studentController.students}
+	The data: #{musicController.music}
 		
 	<h:messages />
 	

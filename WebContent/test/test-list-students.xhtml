@@ -4,44 +4,52 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <f:metadata>
-  <f:event type="preRenderView" listener="#{studentController.loadStudents()}"/>
+  <f:event type="preRenderView" listener="#{musicController.loadMusic()}"/>
 </f:metadata>
 
 <h:head>
-	<title>Student Table Demo</title>
+	<title>Music Table Demo</title>
 </h:head>
 
 <h:body>
-	<h3>Student Table Demo</h3>
+	<h3>Music Table Demo</h3>
 
 	<hr/>
 
 	<br/>
 	
-	<h:dataTable value="#{studentController.students}" var="tempStudent" border="1">
+	<h:dataTable value="#{musicController.music}" var="tempMusic" border="1">
 		
 		<h:column>
 			<!-- the column header -->
-			<f:facet name="header">First Name</f:facet>
+			<f:facet name="header">Album Title</f:facet>
 			
 			<!--  the value for each row -->
-			#{tempStudent.firstName}
+			#{tempMusic.albumTitle}
 		</h:column>
 
 		<h:column>
+		<!-- the column header -->
+		<f:facet name="header">Album Artist</f:facet>
+
+		<!--  the value for each row -->
+		#{tempMusic.albumArtist}
+	</h:column>
+		<h:column>
 			<!-- the column header -->
-			<f:facet name="header">Last Name</f:facet>
-			
+			<f:facet name="header">Number of Songs</f:facet>
+
 			<!--  the value for each row -->
-			#{tempStudent.lastName}
+			#{tempMusic.numberOfSongs}
 		</h:column>
+
 
 		<h:column>
 			<!-- the column header -->
-			<f:facet name="header">Email</f:facet>
+			<f:facet name="header">Song Title</f:facet>
 			
 			<!--  the value for each row -->
-			#{tempStudent.email}
+			#{tempMusic.songTitle}
 		</h:column>
 
 	</h:dataTable>

@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 @WebServlet("/TestServlet")
 public class TestServlet extends HttpServlet {
 
-	@Resource(name = "jdbc/student_tracker")
+	@Resource(name = "jdbc/MusicDb")
 	private DataSource dataSource;
 
 	protected void doGet(HttpServletRequest request,
@@ -33,16 +33,16 @@ public class TestServlet extends HttpServlet {
 		try {
 			myConn = dataSource.getConnection();
 
-			String sql = "select * from student;";
+			String sql = "select * from musicTbl;";
 
 			myStmt = myConn.createStatement();
 
 			myRs = myStmt.executeQuery(sql);
 
 			while (myRs.next()) {
-				String email = myRs.getString("email");
-				out.println(email);
-				System.out.println(email);
+				String songTitle = myRs.getString("songTitle");
+				out.println(songTitle);
+				System.out.println(songTitle);
 			}
 		} catch (Exception exc) {
 			exc.printStackTrace();
