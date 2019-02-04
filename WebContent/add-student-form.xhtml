@@ -31,30 +31,30 @@
             <h:panelGrid columns="3">
 
                 <h:outputLabel> Album Title:</h:outputLabel> <h:inputText value="#{song.albumTitle}" id="albumTitle"
-                                                                        required="true"
-                                                                        requiredMessage="***Please Enter your Album Title***"/>
+                                                                          required="true"
+                                                                          requiredMessage="***Please Enter your Album Title***"/>
                 <h:message for="albumTitle"/>
                 <h:outputLabel>Album Artist:</h:outputLabel> <h:inputText value="#{song.albumArtist}" id="albumArtist"
-                                                                        required="true"
-                                                                        requiredMessage="***Please Enter The Album Artist***"/>
+                                                                          required="true"
+                                                                          requiredMessage="***Please Enter The Album Artist***"/>
                 <h:message for="albumArtist"/>
-                <h:outputLabel>Number of Songs:</h:outputLabel> <h:inputText value="#{song.numberOfSongs}" id="numberOfSongs"
-                                                                        required="true"
-                                                                        requiredMessage="***Please Enter the Number of  Songs in your Album ***"/>
+                <h:outputLabel>Number of Songs:</h:outputLabel> <h:inputText value="#{song.numberOfSongs}"
+                                                                             id="numberOfSongs"
+                                                                             required="true"
+                                                                             requiredMessage="***Please Enter the Number of  Songs in your Album ***"/>
                 <h:message
-                    for="numberOfSongs"/>
+                        for="numberOfSongs"/>
                 <h:outputLabel>Song Title:</h:outputLabel> <h:inputText value="#{song.songTitle}" id="songTitle"
                                                                         required="true"
                                                                         requiredMessage="***Please Enter your Song Title***"/>
                 <h:message for="songTitle"/>
                 <h:outputLabel>Song Number:</h:outputLabel> <h:inputText value="#{song.songNumber}" id="songNumber"
-                                                                        required="true"
-                                                                        requiredMessage="***Please Enter the Number of Songs in your Album***"/>
+                                                                         required="true"
+                                                                         requiredMessage="***Please Enter the Number of Songs in your Album***"/>
                 <h:message for="songNumber"/>
 
                 <h:outputLabel/> <h:commandButton value="Save" styleClass="save"
                                                   action="#{songsController.addSong(song)}"/>
-
             </h:panelGrid>
         </h:form>
 
