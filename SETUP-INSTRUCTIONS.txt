@@ -1,4 +1,4 @@
-Student tracker application
+Music Records application
 ============================
 To run the application, one will need the following  software as well as the the steps below:
 1. MySQL database as a relational database- used to store the student records for the Application.
@@ -7,10 +7,11 @@ To run the application, one will need the following  software as well as the the
 
 3. Open the source code for the appropriate version
 
-4. Tom cat Server version 8.5.3.371
+4. Tom cat Server version 9.0
 
 5. Development environment- IntelliJ IDEA: However, it can be run on any Java Development environment.
 
 6. To run the application:
    a. Select the file WebContent/index.html
    b. Right-Click, select Run As > Run On Server
+7. One can use the SQL file to create a database to efficiently run the application.
