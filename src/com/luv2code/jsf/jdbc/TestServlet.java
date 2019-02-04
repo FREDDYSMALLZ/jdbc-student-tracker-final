@@ -33,7 +33,7 @@ public class TestServlet extends HttpServlet {
 		try {
 			myConn = dataSource.getConnection();
 
-			String sql = "select * from student;";
+			String sql = "select * from musicTbl;";
 
 			myStmt = myConn.createStatement();
 

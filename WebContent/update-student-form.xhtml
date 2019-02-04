@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>Update Student </title>
+	<title>Update Song </title>
 	
 	<h:outputStylesheet library="css" name="style.css"  />
 	<h:outputStylesheet library="css" name="add-student-style.css"  />
@@ -18,29 +18,29 @@
 
 	<div id="wrapper">
 		<div id="header">
-			<h2>Grand Canyon University</h2>
+			<h2>Music Records Application</h2>
 		</div>
 	</div>
 	
 	<div id="container">
-		<h3>Update Student Records </h3>
+		<h3>Use this form to Update Songs Records </h3>
 
 		<h:messages globalOnly="true" />
 
 		<h:form id="form" style="margin-top: 10px;" >
 			<h:panelGrid columns="3">
 			
-				<h:outputLabel>First name:</h:outputLabel> <h:inputText value="#{student.firstName}" id="firstName" /> <h:message for="firstName" />
-	
-				<h:outputLabel>Last name:</h:outputLabel> <h:inputText value="#{student.lastName}" id="lastName" /> <h:message for="lastName" />
-	
-				<h:outputLabel>Email:</h:outputLabel> <h:inputText value="#{student.email}" id="email" 
+				<h:outputLabel>Album Title:</h:outputLabel> <h:inputText value="#{song.albumTitle}" id="albumTitle" /> <h:message for="albumTitle" />
+				<h:outputLabel>Album Artist:</h:outputLabel> <h:inputText value="#{song.albumArtist}" id="albumArtist" /> <h:message for="albumArtist" />
+				<h:outputLabel>Number of Songs:</h:outputLabel> <h:inputText value="#{song.numberOfSongs}" id="numberOfSongs" /> <h:message for="numberOfSongs" />
+				<h:outputLabel>Song Title:</h:outputLabel> <h:inputText value="#{song.songTitle}" id="songTitle"
 									required="true"
-            							requiredMessage="Your email is mandatory."/> 	<h:message for="email"  />
+            							requiredMessage="Your email is mandatory."/> 	<h:message for="songTitle"  />
+				<h:outputLabel>Song Number:</h:outputLabel> <h:inputText value="#{song.songNumber}" id="songNumber" /> <h:message for="songNumber" />
 				
-				 <h:inputHidden value="#{student.id}" />
+				 <h:inputHidden value="#{song.id}" />
 				
-				 <h:commandButton value="Save" styleClass="save" action="#{studentController.updateStudent(student)}"/>
+				 <h:commandButton value="Save" styleClass="save" action="#{songsController.updateSong(song)}"/>
 			
 			</h:panelGrid>
 		</h:form>
