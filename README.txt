@@ -1,4 +1,4 @@
-Student Tracker Application using JSF-
+Music Records Application using JSF-
 ========================================
 This directory contains the source code and SQL script for the Student tracker Application
 I have updated the application from the previous versions.
