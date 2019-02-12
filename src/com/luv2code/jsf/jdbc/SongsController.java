@@ -15,7 +15,6 @@ import javax.faces.context.FacesContext;
 @ManagedBean
 @SessionScoped
 public class SongsController {
-
     private List<Song> songs;
     private SongsDbUtil songsDbUtil;
     private Logger logger = Logger.getLogger(getClass().getName());
@@ -25,7 +24,6 @@ public class SongsController {
 
         songsDbUtil = SongsDbUtil.getInstance();
     }
-
     public List<Song> getSongs() {
         return songs;
     }
@@ -49,7 +47,6 @@ public class SongsController {
             addErrorMessage(exc);
         }
     }
-
     public String addSong(Song theSong) {
 
         logger.info("Adding song: " + theSong);
@@ -95,10 +92,8 @@ public class SongsController {
 
             return null;
         }
-
         return "update-student-form.xhtml";
     }
-
     public String updateSong(Song theSong) {
 
         logger.info("updating song: " + theSong);
@@ -120,7 +115,6 @@ public class SongsController {
 
         return "list-songs?faces-redirect=true";
     }
-
     public String deleteSong(int songId) {
 
         logger.info("Deleting song id: " + songId);

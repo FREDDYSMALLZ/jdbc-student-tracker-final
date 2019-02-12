@@ -1,9 +1,9 @@
 package com.luv2code.jsf.jdbc;
+
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean
 public class Song {
-
     private int id;
     private String albumTitle;
     private String albumArtist;
